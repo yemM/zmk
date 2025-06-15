@@ -232,13 +232,18 @@ const lv_img_dsc_t mountain = {
 #define LV_ATTRIBUTE_MEM_ALIGN
 #endif
 
-#ifndef LV_ATTRIBUTE_IMG_OIE_NSHYKU673JCI
-#define LV_ATTRIBUTE_IMG_OIE_NSHYKU673JCI
+#ifndef LV_ATTRIBUTE_IMG_ARASAKA
+#define LV_ATTRIBUTE_IMG_ARASAKA
 #endif
 
-const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_OIE_NSHYKU673JCI uint8_t arasaka_map[] = {
-  0xef, 0xef, 0xef, 0xff, 	/*Color of index 0*/
-  0x04, 0x04, 0x04, 0xff, 	/*Color of index 1*/
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_ARASAKA uint8_t arasaka_map[] = {
+  #if CONFIG_NICE_VIEW_WIDGET_INVERTED
+          0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
+          0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
+  #else
+          0x00, 0x00, 0x00, 0xff, /*Color of index 0*/
+          0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
+  #endif
 
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
